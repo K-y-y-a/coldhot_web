@@ -24,6 +24,7 @@ function startGame() {
     $("#game_box").show()
     $('#number').val('')
     $('#log').html('')
+    $("#log").hide()
 
     currentNumber = []
 	currentNumber[0] = getRandomInt(10)
