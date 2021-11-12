@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Cold-Hot</title>
+		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
 	</head>
@@ -13,10 +14,10 @@
 		
 
 		<div id="change">
-			<input type="button" class="button" id="start_button"   value="Начать игру" onclick="startGame()">
-			<input type="button" class="button" id="history_button" value="История игр" onclick="showList()">
-			<input type="button" class="button" id="repeat_button"  value="Повтор игры" onclick="showReplay()">
-			<input type="button" class="button" id="help_button"    value="Помощь"      onclick="help()">
+			<input type="button" class="button" id="start_button"   value="Начать игру">
+			<input type="button" class="button" id="history_button" value="История игр">
+			<input type="button" class="button" id="repeat_button"  value="Повтор игры">
+			<input type="button" class="button" id="help_button"    value="Помощь"     >
 		</div>
 
 		<div id="dark">
@@ -33,14 +34,15 @@
 		<div id="game_box">
 			<div id="game">
 				<div id="game_field">
-					<input type="text"   id="number" class="button" placeholder="Введите число" maxlength="3" autocomplete="off" onkeypress="checkButton()">
-					<input type="button" id="guess" class="button" value="Угадать" onclick="guess()">
+					<input type="text"   id="number" class="button" placeholder="Введите число" maxlength="3" autocomplete="off">
+					<input type="button" id="guess" class="button" value="Угадать">
 				</div>
 				<div id="log">		
 				</div>		
 			</div>
-		</div>	
+		</div>
+		
+		<script src="jquery-3.6.0.js"></script>
+		<script src="Controller.js" type="module" type="text/javascript"></script>
 	</body>
-	<script src="jquery-3.6.0.js"></script>
-	<script type="module" src="Controller.js"></script>
 </html>
