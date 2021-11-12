@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>Cold-Hot</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="jquery-3.6.0.js"></script>
+	</head>
+
+	<body>
+		<div id="title">
+			<span>Cold-Hot</span> 
+		</div>
+
+		<div id="change">
+			<input type="button" class="button" id="start_button"   value="Начать игру" onclick="startGame()">
+			<input type="button" class="button" id="history_button" value="История игр" onclick="showList()">
+			<input type="button" class="button" id="repeat_button"  value="Повтор игры" onclick="showReplay()">
+			<input type="button" class="button" id="help_button"    value="Помощь"      onclick="help()">
+		</div>
+
+		<div id="dark">
+			<div id="help">
+				<span>Помощь по игре</span>
+				<span>Холодно - Одна цифра не была загадана</span>             
+				<span>Тепло - Одна цифра отгадана, но не отгадана ее позиция</span>
+				<span>Горячо - Одна цифра и ее позиция отгадана</span>
+				<span>Необходимо писать трехзначное число без запятых между цифрами</span>
+				<input type="button" id="close_help" value="Закрыть" onclick="closeHelp()">
+			</div>
+		</div>
+		
+		<div id="game_box">
+			<div id="game">
+				<div id="game_field">
+					<input type="text"   id="number" class="button" placeholder="Введите число" maxlength="3" autocomplete="off" onkeypress="checkButton()">
+					<input type="button" id="guess" class="button" value="Угадать" onclick="guess()">
+				</div>
+				<div id="log">		
+				</div>		
+			</div>
+		</div>
+		
+		<script type="module" src="Controller.js"></script>
+	</body>
+</html>
