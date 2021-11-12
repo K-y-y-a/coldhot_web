@@ -105,3 +105,28 @@ function checkButton(e) {
     if(window.event.keyCode == 13)
        guess();
 }
+
+document.getElementById("start_button").onclick = () => {
+    startGame();
+}
+
+document.getElementById("history_button").onclick = () => {
+    showList();
+}
+
+document.getElementById("repeat_button").onclick = () => {
+    showReplay();
+}
+
+document.getElementById("help_button").onclick = () => {
+    help();
+}
+
+document.getElementById("number").onkeypress = () => {
+   checkButton();
+}
+
+document.getElementById("guess").onclick = () => {
+    guess();
+}
+
