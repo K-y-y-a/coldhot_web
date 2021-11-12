@@ -130,3 +130,6 @@ document.getElementById("guess").onclick = () => {
     guess();
 }
 
+document.getElementById("close_help").onclick = () => {
+    closeHelp();
+}
