@@ -33,6 +33,7 @@ function startGame() {
 			currentNumber.push(new_num)
 		}			
 	} while(currentNumber.length < 3);
+    console.log(currentNumber)
 }
 
 function getRandomInt(max) {
