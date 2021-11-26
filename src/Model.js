@@ -4,11 +4,18 @@ import {
 } from "./View.js"
 
 export function newSecretNumber(){
-    var n = (Math.floor(Math.random() * (1000 - 100)) + 100).toString().split('').map(Number)
+    let n = []
+	n[0] = Math.floor(Math.random() * 10)
+	do {
+		let new_num = Math.floor(Math.random() * 10)
+		if(n.indexOf(new_num) == -1) {
+			n.push(new_num)
+		}			
+	} while(n.length < 3)
+
     console.log(n.join(""))
     return n
 }
-
 var db
 export var currentId
 
