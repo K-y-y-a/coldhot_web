@@ -102,7 +102,7 @@ function play() {
 
 function getReplay() {
 	var gameId = parseInt(prompt("Введите id игры")) 
-	if(gameId == null) {
+	if(isNaN(gameId)) {
 		alert("Введите id игры!")
 		return
 	}
