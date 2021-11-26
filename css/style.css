@@ -1,0 +1,94 @@
+#title{
+	text-align: center;
+	margin-bottom: 5vh;
+	background: radial-gradient(ellipse at top, #fff 40%, transparent 70%);
+	border-radius: 1vw;
+	padding: 0.5vh 1vh 5vh;
+}
+
+#menu{
+	margin: 0 auto;
+	text-align: center;
+}
+
+#title span{
+	font-size: 3vw;
+	color: #000;
+}
+
+html {
+	height: 100%;
+	font-size: 0.3vh;  
+	margin: 0;
+}	
+
+body {
+	margin: 0;
+	font-family: 'Raleway', arial, sans-serif;
+	font-style: 800;
+	background-image:	linear-gradient(135deg, #fffd7b 12.5%, transparent 12.5%,transparent 87.5%, #fffd7b 87.5%),
+						linear-gradient(45deg, transparent 50%,#ff3c3c 50%, #ff3c3c 75%,transparent 75%),
+						linear-gradient(135deg, transparent 37.5%,  #fffd7b 37.5%, #fffd7b 62.5%, transparent 57.5%),
+						linear-gradient(45deg, #ff3c3c 25%, transparent 25%);
+	background-size: 16rem 16rem;
+	background-color: #5435ff;  
+	color: #ffffff;
+	text-align: center;
+	font-size: 1vh;
+}
+
+.button{
+	padding: 1vw;
+	margin: 1vw;
+	font-size: 1.5vw;
+	border-radius: 1vw;
+	border-width: 0.3vw;
+	width: 30%;
+	background: white;
+}
+
+.text{
+	padding: 1vw;
+	margin: 1vw;
+	font-size: 1.5vw;
+	border-radius: 1vw;
+	border-width: 0.3vw;
+	width: 15%;
+	text-align: center;
+}
+
+.container {
+	width: 100%;
+	margin: auto;
+	padding: 30px;
+	border-radius: 30px; 
+	box-sizing: border-box;
+}
+
+#header{
+	color: #000;
+	margin: 1vh auto;
+	font-size: 3vh;
+	background: white;
+	width: 100%;
+	border-radius: 50%;
+	padding: 1vh;
+}
+
+.hidden {
+	display: none;
+}
+
+table {
+	border: 0.3vw outset gray;
+	border-spacing: 0px;
+	background: white;
+	color: #000;
+	margin: 0 auto;
+	font-size: 3vh;
+}
+
+td, th {
+	padding: 2vh;
+	border: 1px solid gray;
+}

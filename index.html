@@ -3,46 +3,27 @@
 	<head>
 		<title>Cold-Hot</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css">		
+		<script src="https://unpkg.com/idb@5/build/iife/index-min.js"></script>
 	</head>
 
 	<body>
 		<div id="title">
 			<span>Cold-Hot</span> 
 		</div>
-		
-
-		<div id="change">
-			<input type="button" class="button" id="start_button"   value="Начать игру">
-			<input type="button" class="button" id="history_button" value="История игр">
-			<input type="button" class="button" id="repeat_button"  value="Повтор игры">
-			<input type="button" class="button" id="help_button"    value="Помощь"     >
-		</div>
-
-		<div id="dark">
-			<div id="help">
-				<span>Помощь по игре</span>
-				<span>Холодно - Одна цифра не была загадана</span>             
-				<span>Тепло - Одна цифра отгадана, но не отгадана ее позиция</span>
-				<span>Горячо - Одна цифра и ее позиция отгадана</span>
-				<span>Необходимо писать трехзначное число без запятых между цифрами</span>
-				<input type="button" id="close_help" value="Закрыть">
+		<div class="container">
+			<div id="menu">
+				<input type="button" class="button" id="startGame"   value="Начать игру"><br>
+				<input type="button" class="button" id="showGames"   value="История игр"><br>
+				<input type="button" class="button" id="showReplay"  value="Повтор игры"><br>
 			</div>
-		</div>
-		
-		<div id="game_box">
-			<div id="game">
-				<div id="game_field">
-					<input type="text"   id="number" class="button" placeholder="Введите число" maxlength="3" autocomplete="off">
-					<input type="button" id="guess" class="button" value="Угадать">
-				</div>
-				<div id="log">		
-				</div>		
+			<div id="game" class="hidden">
+				<input type="text" id="guessNumber" class="text" placeholder="Введите число"><br>
+				<input type="button" id="button" class="button" value="Угадать">
 			</div>
+			<div id = 'header' class='hidden'></div>
+      		<div id = 'info' class='hidden'></div>
 		</div>
-		
-		<script src="jquery-3.6.0.js"></script>
-		<script src="Controller.js" type="module" type="text/javascript"></script>
 	</body>
+	<script src="src/Controller.js" type="module"></script>
 </html>
