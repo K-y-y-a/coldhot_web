@@ -3,11 +3,14 @@ import {
     showGameInfo 
 } from "./View.js"
 
-var n = Math.floor(Math.random() * (1000 - 100)) + 100
-export var secretNumber = n.toString().split('').map(Number)
+export function newSecretNumber(){
+    var n = (Math.floor(Math.random() * (1000 - 100)) + 100).toString().split('').map(Number)
+    console.log(n.join(""))
+    return n
+}
+
 var db
 export var currentId
-console.log(secretNumber.join(""))
 
 export async function initializeDB()
 {
@@ -46,7 +49,7 @@ async function getCurrentId()
     currentId = gamesList.length + 1
 }
 
-export async function writeGameInfo(username)
+export async function writeGameInfo(username, secretNumber)
 {
     var date = new Date().toLocaleString()
     var gameStatus = 'Не окончена!'
