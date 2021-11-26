@@ -1,12 +1,12 @@
 import { 
-	secretNumber, 
 	currentId, 
 	initializeDB, 
 	getGames, 
 	createReplay, 
 	writeGameInfo, 
 	updateGameStatus, 
-	writeAttemptInfo 
+	writeAttemptInfo, 
+	newSecretNumber
 } from './Model.js'
 
 import { 
@@ -25,6 +25,7 @@ var menu = document.getElementById("menu")
 var play_button = document.getElementById("button")
 var text_field = document.getElementById("guessNumber")
 var t = 1
+var secretNumber
 window.onload = initializeDB
 
 function coldHot(currentStrNumber, hiddenStrNumber) {
@@ -51,11 +52,12 @@ function startGame() {
 		alert("Имя не может быть пустым")
 		return
 	}
+	secretNumber = newSecretNumber()
 	hide(info)
 	hide(menu)
 	hide(header)
 	show(game)
-	writeGameInfo(username)
+	writeGameInfo(username, secretNumber)
 }
 
 function play() {
